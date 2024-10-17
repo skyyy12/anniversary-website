@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('stars-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Flying hearts effect */
+@keyframes fly-hearts {
+    0% {
+        transform: translateY(-100vh);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+.heart {
+    position: absolute;
+    top: -10vh;
+    width: 50px;
+    height: 50px;
+    background: url('heart.png') no-repeat center;
+    background-size: contain;
+    animation: fly-hearts 5s infinite linear;
+    opacity: 0.6;
+}
+
+.heart:nth-child(2) {
+    left: 20%;
+    animation-duration: 7s;
+}
+
+.heart:nth-child(3) {
+    left: 50%;
+    animation-duration: 10s;
+}
+
+.heart:nth-child(4) {
+    left: 80%;
+    animation-duration: 12s;
+}
+
+.title {
+    font-size: 2.5em;
+    color: palevioletred;
+    margin-bottom: 20px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 2s forwards; /* Title fades in */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.slideshow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 70vh;
+    margin-top: 30px; 
+}
+
+.text {
+    margin-top: 20px;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+
+.slide {
+    display: none;
+    text-align: center;
+}
+
+.slideshow {
+    max-width: 50%; /* Smaller image size */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.text {
+    margin-top: 20px;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bold;  /* This makes the text bold */
+    color: black;  /* This makes the text black */
+}
+
+
+.question-container {
+    text-align: center;
+    margin-top: -40px;  /* Reduced margin to move the question up */
+    display: none;
+}
+
+.question {
+    font-size: 2em;
+    color: red;
+    margin-bottom: 10px; /* Adds space between the question and buttons */
+}
+
+button {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
